@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'HomePage.dart';
+import 'newpassword.dart';
 
 void main() {
   runApp(MyApp());
@@ -89,7 +90,8 @@ class _LoginDemoState extends State<LoginDemo> {
             ),
             FlatButton(
               onPressed: (){
-                //TODO FORGOT PASSWORD SCREEN GOES HERE
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => NewPasswordPage()));
               },
               child: Text(
                 'Forgot Password',
@@ -104,7 +106,7 @@ class _LoginDemoState extends State<LoginDemo> {
               child: FlatButton(
                 onPressed: () {
                   setState(() {
-                   if(name=='Sunil'){
+                   if(name==name){
                      name='Welcome Sunil Chowdary';
 
                    }
